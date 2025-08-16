@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/road_background1"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Smart Helmet"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Traffic and Helmet Safety Tips"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Safety Tips -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFA64D"
+            android:textColor="#000000"
+            android:text="• Always wear a helmet while riding."
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFA64D"
+            android:textColor="#000000"
+            android:text="• Follow all traffic rules and signals."
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFA64D"
+            android:textColor="#000000"
+            android:text="• Avoid using mobile phones while driving."
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFA64D"
+            android:textColor="#000000"
+            android:text="• Don’t overspeed or perform stunts."
+            android:padding="12dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Section Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Common Traffic Signs"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginBottom="16dp"
+            android:textAlignment="center" />
+
+        <!-- Individual Signs -->
+        <!-- Stop -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/stop" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="𝙨𝙩𝙤𝙥"
+                android:textSize="16sp"
+                android:layout_marginStart="12dp" />
+        </LinearLayout>
+
+        <!-- No Entry -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/no_entry" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🅽🅾 🅴🅽🆃🆁🆈"
+                android:textSize="16sp"
+                android:layout_marginStart="12dp" />
+        </LinearLayout>
+
+        <!-- Speed Limit -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/speed_limit" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="𝐒𝐩𝐞𝐞𝐝 𝐋𝐢𝐦𝐢𝐭
+"
+                android:textSize="16sp"
+                android:layout_marginStart="12dp" />
+        </LinearLayout>
+
+        <!-- Pedestrian -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/pedestrian" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="𝙋𝙚𝙙𝙚𝙨𝙩𝙧𝙞𝙖𝙣 𝘾𝙧𝙤𝙨𝙨𝙞𝙣𝙜"
+                android:textSize="16sp"
+                android:layout_marginStart="12dp" />
+        </LinearLayout>
+
+        <!-- No Parking (Horizontal Scroll) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <HorizontalScrollView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:layout_marginEnd="12dp" android:src="@drawable/no_parking" />
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:layout_marginEnd="12dp" android:src="@drawable/no_parking2" />
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:layout_marginEnd="12dp" android:src="@drawable/no_parking3" />
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:layout_marginEnd="12dp" android:src="@drawable/no_parking4" />
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:layout_marginEnd="12dp" android:src="@drawable/no_parking5" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Parking"
+                android:textSize="16sp"
+                android:paddingStart="12dp"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- No Horn (Scrollable) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <HorizontalScrollView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:layout_marginEnd="12dp" android:src="@drawable/no_horn1" />
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/no_horn2" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Horn"
+                android:textSize="16sp"
+                android:paddingStart="12dp"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- No U Turn -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/no_u_turn" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ᑎO ᑌ Tᑌᖇᑎ"
+                android:textSize="16sp"
+                android:layout_marginStart="12dp" />
+        </LinearLayout>
+
+        <!-- No Bicycle -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/no_bycycle" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Bicycle"
+                android:textSize="16sp"
+                android:layout_marginStart="12dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
