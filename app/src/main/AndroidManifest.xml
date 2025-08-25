@@ -78,6 +78,13 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
 
+        <activity
+            android:name=".LocationActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+
+
+
     </application>
 
 </manifest>

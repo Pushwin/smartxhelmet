@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Deep radial glow background -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="800"
+                android:centerX="0.5"
+                android:centerY="0.5"
+                android:startColor="#FF6F00"
+            android:endColor="#E65100"
+            android:angle="45"/>
+        </shape>
+    </item>
+
+    <!-- Top soft overlay for premium shine -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="90"
+                android:startColor="#40FFFFFF"
+                android:endColor="#00FFFFFF" />
+        </shape>
+    </item>
+
+    <!-- Subtle diagonal streaks -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="135"
+                android:startColor="#20FFFFFF"
+                android:centerColor="#00FFFFFF"
+                android:endColor="#20FFFFFF" />
+        </shape>
+    </item>
+
+</layer-list>

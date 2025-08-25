@@ -37,7 +37,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FFA64D"
+            android:background="@drawable/glow_button1"
             android:textColor="#000000"
             android:text="• Always wear a helmet while riding."
             android:padding="12dp"
@@ -46,7 +46,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FFA64D"
+            android:background="@drawable/glow_button1"
             android:textColor="#000000"
             android:text="• Follow all traffic rules and signals."
             android:padding="12dp"
@@ -55,7 +55,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FFA64D"
+            android:background="@drawable/glow_button1"
             android:textColor="#000000"
             android:text="• Avoid using mobile phones while driving."
             android:padding="12dp"
@@ -64,7 +64,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FFA64D"
+            android:background="@drawable/glow_button1"
             android:textColor="#000000"
             android:text="• Don’t overspeed or perform stunts."
             android:padding="12dp"
@@ -97,6 +97,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="𝙨𝙩𝙤𝙥"
+                android:textColor="#ffffff"
                 android:textSize="16sp"
                 android:layout_marginStart="12dp" />
         </LinearLayout>
@@ -116,6 +117,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="🅽🅾 🅴🅽🆃🆁🆈"
+                android:textColor="#ffffff"
+
                 android:textSize="16sp"
                 android:layout_marginStart="12dp" />
         </LinearLayout>
@@ -134,8 +137,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="𝐒𝐩𝐞𝐞𝐝 𝐋𝐢𝐦𝐢𝐭
-"
+                android:text="𝐒𝐩𝐞𝐞𝐝 𝐋𝐢𝐦𝐢𝐭"
+                android:textColor="#ffffff"
                 android:textSize="16sp"
                 android:layout_marginStart="12dp" />
         </LinearLayout>
@@ -155,6 +158,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="𝙋𝙚𝙙𝙚𝙨𝙩𝙧𝙞𝙖𝙣 𝘾𝙧𝙤𝙨𝙨𝙞𝙣𝙜"
+                android:textColor="#ffffff"
+
                 android:textSize="16sp"
                 android:layout_marginStart="12dp" />
         </LinearLayout>
@@ -189,10 +194,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="No Parking"
+                android:textColor="#ffffff"
+
                 android:textSize="16sp"
                 android:paddingStart="12dp"
                 android:textStyle="bold"
-                android:textColor="#000000" />
+               />
         </LinearLayout>
 
         <!-- No Horn (Scrollable) -->

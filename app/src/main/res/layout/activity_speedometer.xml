@@ -3,42 +3,151 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@drawable/speed7_orange_gradient"
     android:padding="24dp">
 
+    <!-- Helmet ID + Fetch Button -->
+    <LinearLayout
+        android:id="@+id/helmetIdContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/etUserId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter Helmet ID"
+            android:background="@android:drawable/edit_text"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnFetch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fetch"
+            android:backgroundTint="#FF9800"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="8dp"
+            android:padding="12dp" />
+    </LinearLayout>
+
+    <!-- Title -->
     <TextView
         android:id="@+id/tvSpeedTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="🏍️ Live Speedometer"
-        android:textSize="24sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
+        android:shadowColor="#99000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="8"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
-        android:layout_alignParentTop="true" />
+        android:layout_below="@id/helmetIdContainer"
+        android:layout_marginTop="20dp" />
 
-    <com.github.anastr.speedviewlib.SpeedView
-        android:id="@+id/speedometerView"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Feel the Speed • Ride the Future"
+        android:textSize="14sp"
+        android:textColor="#B0BEC5"
+        android:layout_below="@id/tvSpeedTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"/>
+
+    <!-- Premium Rotating Glow Ring -->
+    <ImageView
+        android:id="@+id/premiumGlowRing"
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:src="@drawable/speed8_glow_ring"
         android:layout_centerInParent="true"
-        app:sv_unit="km/h"
-        app:sv_withTremble="true"
-        app:sv_speedTextColor="#FFA500"
-        app:sv_markColor="#FFFFFF"
-        app:sv_centerCircleColor="#222222" />
+        android:alpha="0.6"/>
 
+    <!-- Neon Glow Background Behind Speedometer -->
+    <ImageView
+        android:id="@+id/speedGlow"
+        android:layout_width="420dp"
+        android:layout_height="420dp"
+        android:src="@drawable/speed5"
+        android:layout_centerInParent="true"
+        android:alpha="0.8"/>
+
+    <!-- Glowing CardView for Speedometer -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/speedCard"
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:layout_centerInParent="true"
+        app:cardBackgroundColor="#1A1A1A"
+        app:cardCornerRadius="180dp"
+        app:cardElevation="20dp">
+
+        <com.github.anastr.speedviewlib.SpeedView
+            android:id="@+id/speedometerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:sv_unit="km/h"
+            app:sv_withTremble="true"
+            app:sv_speedTextColor="#FFEB3B"
+            app:sv_markColor="#FFFFFF"
+            app:sv_centerCircleColor="#2A2A2A"
+            app:sv_indicatorColor="#FF5722" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Back Button -->
     <Button
         android:id="@+id/btnBackToDashboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="🔙 Back"
         android:textColor="#FFFFFF"
-        android:background="@drawable/glow_button2"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="10dp"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-medium"
+        android:background="@drawable/speed4"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="14dp"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/speedometerView"
-        android:layout_marginTop="32dp"/>
+        android:layout_below="@id/speedCard"
+        android:layout_marginTop="40dp" />
+
+    <!-- Bottom Glass Info Panel -->
+    <LinearLayout
+        android:id="@+id/infoPanel"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/speed6"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚡ Engine On"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginEnd="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📡 GPS Active"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
 </RelativeLayout>
