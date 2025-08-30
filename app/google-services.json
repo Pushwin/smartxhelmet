@@ -1,14 +1,14 @@
 {
   "project_info": {
-    "project_number": "231298757912",
-    "firebase_url": "https://speedtracker-c8d95-default-rtdb.firebaseio.com",
-    "project_id": "speedtracker-c8d95",
-    "storage_bucket": "speedtracker-c8d95.firebasestorage.app"
+    "project_number": "608173661013",
+    "firebase_url": "https://smarthelmet-633f7-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "smarthelmet-633f7",
+    "storage_bucket": "smarthelmet-633f7.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:231298757912:android:2b76ab10002212821dda6d",
+        "mobilesdk_app_id": "1:608173661013:android:0cb142fceb777129572ddc",
         "android_client_info": {
           "package_name": "com.example.smartxhelmet"
         }
@@ -16,7 +16,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBDH_VgUOkigRuyElreyAmGLOYXUmVdVVE"
+          "current_key": "AIzaSyDTqyGOftn2Dc58PD254z9jkv6D6-btPKQ"
         }
       ],
       "services": {

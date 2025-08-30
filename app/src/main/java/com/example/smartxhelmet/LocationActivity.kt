@@ -1,31 +1,36 @@
 package com.example.smartxhelmet
 
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.Marker
+import com.google.android.gms.maps.model.MarkerOptions
 
-class LocationActivity : AppCompatActivity() {
+class LocationActivity : AppCompatActivity(), OnMapReadyCallback {
 
-    private lateinit var etUserId: EditText
-    private lateinit var btnFetch: Button
+    private lateinit var mMap: GoogleMap
+    private var helmetMarker: Marker? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_location)
 
-        etUserId = findViewById(R.id.etUserId)
-        btnFetch = findViewById(R.id.btnFetch)
+        // Setup Map
+        val mapFragment = supportFragmentManager
+            .findFragmentById(R.id.mapContainer) as SupportMapFragment
+        mapFragment.getMapAsync(this)
+    }
 
-        btnFetch.setOnClickListener {
-            val enteredId = etUserId.text.toString().trim()
-            if (enteredId.isNotEmpty()) {
-                Toast.makeText(this, "Fetching location for ID: $enteredId", Toast.LENGTH_SHORT).show()
-                // 🔥 Later: Fetch location from Firebase/Server here
-            } else {
-                Toast.makeText(this, "Please enter a valid ID", Toast.LENGTH_SHORT).show()
-            }
-        }
+    override fun onMapReady(googleMap: GoogleMap) {
+        mMap = googleMap
+
+        // Example starting point: New Delhi
+        val startPos = LatLng(28.6139, 77.2090)
+        helmetMarker = mMap.addMarker(MarkerOptions().position(startPos).title("Helmet Location"))
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(startPos, 15f))
     }
 }
