@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("com.google.gms.google-services") version "4.4.3" apply false
 }
 
 android {
@@ -45,6 +46,10 @@ android {
 }
 
 dependencies {
+    //firebase
+
+    implementation(platform("com.google.firebase:firebase-bom:34.2.0"))
+
     // Maps
     implementation("com.google.android.gms:play-services-maps:18.1.0")
     implementation("com.google.android.gms:play-services-location:21.0.1")
